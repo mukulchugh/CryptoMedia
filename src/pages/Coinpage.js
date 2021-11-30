@@ -1,4 +1,6 @@
-import { LinearProgress, makeStyles, Typography } from "@material-ui/core";
+import { LinearProgress, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

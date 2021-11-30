@@ -7,10 +7,12 @@ import CryptoContext from "./CryptoContext";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <CryptoContext>
-      <App />
-    </CryptoContext>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <CryptoContext>
+        <App />
+      </CryptoContext>
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,5 +1,4 @@
-import { makeStyles } from "@material-ui/core";
-
+import { makeStyles } from "@material-ui/styles";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
@@ -21,6 +20,7 @@ const Carousel = () => {
 
   useEffect(() => {
     fetchTrendingCoins();
+    // eslint-disable-next-line
   }, [currency]);
 
   const useStyles = makeStyles((theme) => ({
