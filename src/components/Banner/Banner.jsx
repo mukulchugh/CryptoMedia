@@ -1,11 +1,9 @@
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import { Container, makeStyles, Typography } from "@material-ui/core";
+import Carousel from "./Carousel";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
-    backgroundImage: `url(./banner2.jpeg)`,
+    backgroundColor: "#000",
   },
   bannerContent: {
     height: 400,
@@ -21,10 +19,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "center",
   },
+  carousel: {
+    height: "50%",
+    display: "flex",
+    alignItems: "center",
+  },
 }));
 
-const Banner = () => {
+function Banner() {
   const classes = useStyles();
+
   return (
     <div className={classes.banner}>
       <Container className={classes.bannerContent}>
@@ -37,7 +41,7 @@ const Banner = () => {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Hunter
+            Crypto Media
           </Typography>
           <Typography
             variant="subtitle2"
@@ -50,9 +54,10 @@ const Banner = () => {
             Get all the Info regarding your favorite Crypto Currency
           </Typography>
         </div>
+        <Carousel />
       </Container>
     </div>
   );
-};
+}
 
 export default Banner;
