@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { TrendingCoins } from "../../config/api";
 import { CryptoState } from "../../CryptoContext";
 import { numberWithCommas } from "../CoinsTable";
+import React from "react";
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
@@ -20,7 +21,7 @@ const Carousel = () => {
 
   useEffect(() => {
     fetchTrendingCoins();
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
 
   const useStyles = makeStyles((theme) => ({
@@ -49,7 +50,7 @@ const Carousel = () => {
         <img
           src={coin?.image}
           alt={coin.name}
-          height="60"
+          height="50"
           style={{ marginBottom: 10 }}
         />
         <span>
@@ -77,7 +78,7 @@ const Carousel = () => {
       items: 2,
     },
     512: {
-      items: 4,
+      items: 6,
     },
   };
 

@@ -1,6 +1,6 @@
-import { Container, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Container, makeStyles, Typography } from "@material-ui/core";
 import Carousel from "./Carousel";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
@@ -42,7 +42,7 @@ function Banner() {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Media
+            CryptoMedia
           </Typography>
           <Typography
             variant="subtitle2"

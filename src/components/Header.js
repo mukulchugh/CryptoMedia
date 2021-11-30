@@ -6,8 +6,14 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { createTheme, makeStyles, ThemeProvider } from "@material-ui/styles";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+
+import {
+  createTheme,
+  makeStyles,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +39,7 @@ function Header() {
   const classes = useStyles();
   const { currency, setCurrency } = CryptoState();
 
-  const history = useNavigate();
+  const history = useHistory();
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -41,13 +47,13 @@ function Header() {
         <Container>
           <Toolbar>
             <Typography
-              onClick={() => history(`/`)}
+              onClick={() => history.push(`/`)}
               variant="h6"
               className={classes.title}
             >
-              Crypto Media
+              CryptoMedia
             </Typography>
-
+            {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"

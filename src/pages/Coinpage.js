@@ -1,6 +1,4 @@
-import { LinearProgress, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-
+import { LinearProgress, makeStyles, Typography } from "@material-ui/core";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -9,6 +7,7 @@ import CoinInfo from "../components/CoinInfo";
 import { SingleCoin } from "../config/api";
 import { numberWithCommas } from "../components/CoinsTable";
 import { CryptoState } from "../CryptoContext";
+import React from "react";
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -87,7 +86,7 @@ const CoinPage = () => {
       <div className={classes.sidebar}>
         <img
           src={coin?.image.large}
-          alt={coin?.name}
+          alt={coin.name}
           height="200"
           style={{ marginBottom: 20 }}
         />

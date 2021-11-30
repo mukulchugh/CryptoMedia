@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Pagination from "@material-ui/lab/Pagination";
 import {
   Container,
@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { CoinList } from "../config/api";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 export function numberWithCommas(x) {
@@ -50,7 +50,7 @@ export default function CoinsTable() {
   });
 
   const classes = useStyles();
-  const history = useNavigate();
+  const history = useHistory();
 
   const darkTheme = createTheme({
     palette: {
@@ -128,7 +128,7 @@ export default function CoinsTable() {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => history(`/coins/${row.id}`)}
+                        onClick={() => history.push(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
                       >
