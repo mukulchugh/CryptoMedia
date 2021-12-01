@@ -2,10 +2,10 @@
 
 ## Demo
 
-#### Here is a working live demo : https://objective-mccarthy-1b5b35.netlify.app/
+#### Live Demo : https://cryptomedia.netlify.app
 
 ## Built with
 
 - [React JS](https://reactjs.org/)
-- [Material UI](https://v4.mui.com/)
+- [Material UI](https://mui.com/)
 - [Chart JS](https://reactchartjs.github.io/react-chartjs-2/#/)
