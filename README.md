@@ -2,7 +2,7 @@
 
 ## Demo
 
-#### Here is a working live demo : https://objective-mccarthy-1b5b35.netlify.app/
+#### Live Demo : https://cryptomedia.netlify.app
 
 ## Built with
 
